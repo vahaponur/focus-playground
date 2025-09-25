@@ -1,4 +1,4 @@
-.PHONY: install compile package publish version-patch version-minor version-major clean
+.PHONY: install compile package publish version-patch version-minor version-major clean clean-publish-minor
 
 install:
 	npm install
@@ -23,3 +23,9 @@ version-major:
 
 clean:
 	rm -rf node_modules out focus-playground-*.vsix
+
+clean-publish-minor:
+	npm install
+	npm run compile
+	npm version minor
+	vsce publish
