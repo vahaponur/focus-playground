@@ -1,0 +1,16 @@
+# Generated directories
+out/
+.vscode-test/
+node_modules/
+
+# Packaging artifacts
+*.vsix
+
+# Logs and temp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+
+# Local agent notes
+agent_feed/

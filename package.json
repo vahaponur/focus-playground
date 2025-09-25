@@ -1,0 +1,80 @@
+{
+  "name": "focus-playground",
+  "displayName": "Focus Playground",
+  "description": "A VS Code extension for quick `focus mini-games` while AI agents run.",
+  "version": "0.0.1",
+  "publisher": "vahaponur",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onCommand:focusPlayground.start",
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "focusPlayground.start",
+        "title": "Focus Playground: Open"
+      },
+      {
+        "command": "focusPlayground.toggleIdle",
+        "title": "Focus Playground: Toggle Idle Auto-Open"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Focus Playground",
+      "properties": {
+        "focusPlayground.autoShowOnIdle": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show a friendly nudge to play when you're idle for a bit."
+        },
+        "focusPlayground.idleSeconds": {
+          "type": "number",
+          "default": 25,
+          "minimum": 5,
+          "maximum": 180,
+          "description": "Seconds of no typing/selection before showing a play nudge."
+        },
+        "focusPlayground.defaultDuration": {
+          "type": "number",
+          "default": 30,
+          "minimum": 10,
+          "maximum": 180,
+          "description": "Default game duration in seconds."
+        },
+        "focusPlayground.sidebar": {
+          "type": "boolean",
+          "default": false,
+          "description": "Try to open in a side panel instead of a tab."
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "focusPlayground.start",
+        "key": "ctrl+alt+f",
+        "mac": "cmd+alt+g",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^18.19.0",
+    "typescript": "^5.4.0",
+    "vsce": "^2.15.0"
+  }
+}
