@@ -16,7 +16,6 @@
   ],
   "main": "./out/extension.js",
   "activationEvents": [
-    "onCommand:focusPlayground.start",
     "onStartupFinished"
   ],
   "contributes": {
