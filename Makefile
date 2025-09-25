@@ -31,6 +31,6 @@ clean-publish-minor:
 	vsce publish
 clean-publish-patch:
 	npm install
-	npm run package
 	npm version patch
+	npm run package
 	vsce publish
