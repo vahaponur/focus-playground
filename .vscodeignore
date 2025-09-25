@@ -1,0 +1,11 @@
+**/.DS_Store
+**/*.vsix
+**/*.map
+.vscode/
+.vscode-test/
+node_modules/
+out/test/
+src/
+tsconfig.json
+Makefile
+agent_feed/
