@@ -2,7 +2,7 @@
   "name": "focus-playground",
   "displayName": "Focus Playground",
   "description": "A VS Code extension for quick `focus mini-games` while AI agents run.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "vahaponur",
   "engines": {
     "vscode": "^1.85.0"
