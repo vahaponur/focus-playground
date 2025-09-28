@@ -29,6 +29,6 @@
 - After user validation, push the branch and open a PR with summary, linked issue, and screenshots/GIFs if UI changes are visible.
 
 ## Project Management Notes
-- GitHub Issues (#1 pointer-lock debug, #2 debug instructions) are the source of truth. Before starting, confirm the relevant issue and branch name (e.g., `feature/debug-overlay`).
+- GitHub Issues are the source of truth. Before starting, confirm the relevant issue and branch name (e.g., `feature/debug-overlay`).
 - When instructions change mid-task, update the branch plan in your notes but still avoid pushing until the user says "push".
 
